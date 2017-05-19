@@ -9,6 +9,16 @@ const loadModule = (comMod) => (componentModule) => {
 export default function createRoutes() {
 
   return [
+
+      {
+       path: '/SignUp',
+       name: 'home',
+       getComponent(nextState, comMod) {
+         import('containers/SignUp')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
       {
        path: '/',
        name: 'home',

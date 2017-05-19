@@ -8,7 +8,6 @@
  */
 
 import React from 'react';
-
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
@@ -20,7 +19,8 @@ export default class App extends React.PureComponent { // eslint-disable-line re
   getChildContext()
   {
     var theme = getMuiTheme();
-
+    theme.appBar.color='#212121';
+    theme.raisedButton.primaryColor="#003B4D";
     return { muiTheme: theme }
   };
 
