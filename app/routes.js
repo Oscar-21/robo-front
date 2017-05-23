@@ -11,10 +11,20 @@ export default function createRoutes() {
   return [
 
       {
-       path: '/SignUp',
-       name: 'home',
+       path: '/StoreFront',
+       name: 'storefront',
        getComponent(nextState, comMod) {
-         import('containers/SignUp')
+         import('containers/StoreFront')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
+
+      {
+       path: '/Dashboard',
+       name: 'dashboard',
+       getComponent(nextState, comMod) {
+         import('containers/Dashboard')
            .then(loadModule(comMod))
            .catch(errorLoading);
        },

@@ -61,9 +61,9 @@ constructor(props) {
               <Menu>
                 <MenuItem primaryText="Home" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="About us" containerElement={<Link to="/SignUp"></Link>} />
-                <MenuItem primaryText="Browse" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="Contribute" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="Our Friends" containerElement={<Link to="/"></Link>} />
+                <MenuItem primaryText="Browse" containerElement={<Link to="/SignIn"></Link>} />
+                <MenuItem primaryText="Contribute" containerElement={<Link to="/Dashboard"></Link>} />
+                <MenuItem primaryText="Our Friends" containerElement={<Link to="/StoreFront"></Link>} />
               </Menu>
             </Paper>
           </Responsive>
@@ -75,7 +75,7 @@ constructor(props) {
                 <MenuItem primaryText="Browse" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="Contribute" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="Our Friends" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="Log in" containerElement={<Link to="/"></Link>} />
+                <MenuItem primaryText="Log in" containerElement={<Link to="/StoreFront"></Link>} />
               </Menu>
             </Paper>
           </Responsive>
