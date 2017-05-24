@@ -9,14 +9,14 @@ import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Responsive from 'react-responsive';
 /* import heroImage from '../images/sumomasklogotmjpg.jpg'; */
-import botPic from '../images/domo.jpg';
+import botPic from '../images/SRL_head.png';
 
 export default class StoreFront extends React.PureComponent {
   render() {
     const grid = {
       margin: '0 auto',
-      maxWidth: '1200px',
-      width: '100%',
+      /*maxWidth: '1400px',
+*/      width: '100%',
     };
 
   /* const gridMobile = {
@@ -25,7 +25,7 @@ export default class StoreFront extends React.PureComponent {
       width: '100%',
     }; */
     const row = {
-      width: '100vw',
+      width: '100%',
       display: 'flex',
       flexDirection: 'row',
       /*overflow: "auto"*/
@@ -121,7 +121,7 @@ export default class StoreFront extends React.PureComponent {
     };
     const col122 = {
       width: '100%',
-      height: '.5vh',
+      height: '.2vh',
       background: 'black',
     };
  /* const style = {
@@ -144,20 +144,31 @@ export default class StoreFront extends React.PureComponent {
     const tabChildNewTextz = {
       width: '11.1%',
       display: 'inline-block',
+      background: '#BDBEC0',
    /* border: '1px solid #999999', */
       paddingTop: '1vh',
       fontFamily: 'Monteserrat',
       fontWeight: 'Bold',
       verticalAlign: 'middle',
-      textAlign: 'center',
+      /*textAlign: 'center',*/
       textTransform: 'uppercase',
       letterSpacing: '2.5px',
-      fontSize: '13px',
+      fontSize: '1.1em',
       color: 'white',
-      borderTop: '.5px solid black',
+      /*borderTop: '.5px solid black',
       borderLeft: '.5px solid black',
       borderBottom: '.5px solid black',
-      borderRight: '.5px solid black',
+      borderRight: '.5px solid black',*/
+    };
+    const navStyle = {
+      width: '100%',
+    };
+    const navStyleText = {
+      margin: '0 auto',
+      opacity: '0.5%',
+      paddingTop: '20%',
+      textShadow: '1px 0px .5px #000, 1px -.5px -.5px #000, 1px .5px .5px #000',
+
     };
     return (
 
@@ -178,36 +189,37 @@ export default class StoreFront extends React.PureComponent {
 
             <Responsive minDeviceWidth={1024}>
 
-              <div>
+              <div style={row}>
                 {/* TODO */}
-                <div style={tabChildNewTextz}>
                   <img
                     style={{
-                      borderRadius: '10px',
+                      width: '11.1%',
+                      background: '#BDBEC0',
+                      height: '5%',
+                      /*borderRadius: '10px',*/
                       alignItem: 'left',
                     }} src={botPic} alt=""
                   />
-                </div>
-                <div style={tabChildNewTextz}></div>
-                <div style={tabChildNewTextz}></div>
-                <div style={tabChildNewTextz}></div>
-                <div style={tabChildNewTextz}></div>
-                <div style={tabChildNewTextz}></div>
-                <div style={tabChildNewTextz}></div>
-                <div style={tabChildNewTextz}></div>
-                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>tournament</div></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>home</div></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>about</div></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>kits</div></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>the arena</div></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>the cloud</div></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>News</div></div>
+                <div style={tabChildNewTextz}><div style={navStyleText}>Contact</div></div>
               </div>
 
               <div style={col122}></div>
               <div style={row}>
                 <div style={col12}>
-                  <img
+                  {/*<img
                     style={{
                       borderRadius: '10px',
                       width: 'auto',
                       height: 'auto',
                     }} src={botPic} alt=""
-                  />
+                  /> */}
                 </div>
               </div>
             </Responsive>
