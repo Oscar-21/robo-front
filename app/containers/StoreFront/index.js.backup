@@ -162,7 +162,7 @@ export default class StoreFront extends React.PureComponent {
     const tabChildNewTextz = {
       width: '11.1%',
       display: 'inline-block',
-      /*border: '1px solid #999999',*/
+      border: '1px solid #999999',
       paddingTop: '1vh',
       fontFamily: 'Monteserrat',
       fontWeight: 'Bold',
@@ -172,10 +172,6 @@ export default class StoreFront extends React.PureComponent {
       letterSpacing: '2.5px',
       fontSize: '13px',
       color: 'white',
-      borderTop: '.5px solid black',
-      borderLeft: '.5px solid black',
-      borderBottom: '.5px solid black',
-      borderRight: '.5px solid black',
     };
     return (
 
@@ -194,22 +190,24 @@ export default class StoreFront extends React.PureComponent {
 
             <Responsive minDeviceWidth={1024}>
 
-            <div>
-{/*TODO*/}
-              <div style={tabChildNewTextz}>
-                  <img style={{
-                    borderRadius: "10px",
-                    alignItem: "left",
-                  }} src={botPic} alt=""/></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-            </div>
+            <Tabs index={-1}>
+              <Tab style={tabChildNewTextz} label="Tournament" />
+
+              <Tab style={tabChildNewText} label="home" containerElement={<Link to="/"></Link>} />
+
+              <Tab style={tabChildNewText} label="about" containerElement={<Link to="/About"></Link>} />
+
+              <Tab style={tabChildNewText} label="kits" containerElement={<Link to="/Browse"></Link>} />
+
+              <Tab style={tabChildNewText} label="The Arena" containerElement={<Link to="/Dashboard"></Link>} />
+
+              <Tab style={tabChildNewText} label="the cloud" />
+
+              <Tab style={tabChildNewTextz} label="news" containerElement={<Link to="/SignIn"></Link>} />
+
+              <Tab style={tabChildNewTextz} label="Contact" containerElement={<Link to="/SignUp"></Link>} />
+            </Tabs>
+
               <div style={col122}></div>
               <div style={row}>
                 <div style={col12}>

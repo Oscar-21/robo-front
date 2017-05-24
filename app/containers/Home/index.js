@@ -27,16 +27,16 @@ import facebookLogo from '../images/FB-f-Logo__blue_144.png';
 import Responsive from 'react-responsive';
 
 export default class Home extends React.PureComponent {
-constructor(props) {
+constructor( props ) {
     super(props);
     this.state = {
       /*token: sessionStorage.getItem('token'),*/
       menuOpen: false,
     };
-  }
+   }
  handleMenu = () => {
     if (this.state.menuOpen === false) {
-      console.log('test');
+        console.log('test');
       this.setState({ menuOpen: true });
     } else if (this.state.menuOpen === true) {
       console.log('test2');
