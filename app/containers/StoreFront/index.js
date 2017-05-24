@@ -8,143 +8,125 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Responsive from 'react-responsive';
-import RaisedButton from 'material-ui/RaisedButton';
-/* import botPic from '../images/bot.jpg'; */
-import heroImage from '../images/sumomasklogotmjpg.jpg';
-import { Tabs, Tab } from 'material-ui/Tabs';
+/* import heroImage from '../images/sumomasklogotmjpg.jpg'; */
 import botPic from '../images/domo.jpg';
 
 export default class StoreFront extends React.PureComponent {
-  render( ) {
-
+  render() {
     const grid = {
-      margin: "0 auto",
-      maxWidth: "1200px",
-      width: "100%"
-    }
+      margin: '0 auto',
+      maxWidth: '1200px',
+      width: '100%',
+    };
 
-    const gridMobile = {
-      margin: "0 auto",
-      maxWidth: "1023px",
-      width: "100%"
-    }
-
+  /* const gridMobile = {
+      margin: '0 auto',
+      maxWidth: '1023px',
+      width: '100%',
+    }; */
     const row = {
-      width: "100vw",
-      display: "flex",
+      width: '100vw',
+      display: 'flex',
       flexDirection: 'row',
       /*overflow: "auto"*/
-    }
+    };
     const rowMobile = {
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      flexWrap: "wrap",
-      overflow: "auto"
-    }
-
-    const col1 = {
-      width: "8.33%",
-      padding: "10px",
-      flexWrap: "wrap",
-      overflow: "auto",
-      background: "blue"
-    }
-
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
+  /* const col1 = {
+      width: '8.33%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+      background: 'blue',
+    }; */
     const col2 = {
-      width: "16.66%",
-      padding: "10px",
-      flexWrap: "wrap",
-      overflow: "auto"
-    }
+      width: '16.66%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
 
-    const col3 = {
-      width: "25%",
-      padding: "10px",
-      flexWrap: "wrap",
-      overflow: "auto"
-    }
+  /* const col3 = {
+      width: '25%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    }; */
 
     const col4 = {
-      width: "30.33%",
-      padding: "1px",
-      overflow: "auto"
-    }
+      width: '30.33%',
+      padding: '1px',
+      overflow: 'auto',
+    };
 
     const col4Mobile = {
-      width: "100%",
-      padding: "5px",
-      overflow: "auto"
-    }
+      width: '100%',
+      padding: '5px',
+      overflow: 'auto',
+    };
 
-    const col5 = {
-      width: "41.66%",
-      padding: "10px",
-      flexWrap: "wrap",
-      overflow: "auto"
-    }
-
+  /* const col5 = {
+      width: '41.66%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
     const col6 = {
-      width: "50%",
-      flexWrap: "wrap",
-      overflow: "auto"
-    }
-
+      width: '50%',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
     const col62 = {
-      background: "rgb(245,250,245)",
-      width: "50%",
-      padding: "2px",
-      textAlign: "right",
-      fontFamily: "consolas",
-      overflow: "auto"
-    }
+      background: 'rgb(245,250,245)',
+      width: '50%',
+      padding: '2px',
+      textAlign: 'right',
+      fontFamily: 'consolas',
+      overflow: 'auto',
+    };
     const col7 = {
-      width: "58.33%",
-      padding: "10px",
-      overflow: "auto"
-    }
-
+      width: '58.33%',
+      padding: '10px',
+      overflow: 'auto',
+    };
     const col8 = {
-      width: "66.66%",
-      padding: "10px",
-      overflow: "auto"
-    }
-
+      width: '66.66%',
+      padding: '10px',
+      overflow: 'auto'
+    };
     const col9 = {
-      width: "75%",
-      padding: "10px",
-      overflow: "auto"
-    }
-
+      width: '75%',
+      padding: '10px',
+      overflow: 'auto',
+    };
     const col10 = {
-      width: "83.33%",
-      padding: "10px",
-      overflow: "auto"
-    }
-
+      width: '83.33%",
+      padding: '10px',
+      overflow: 'auto',
+    };
     const col11 = {
-      width: "91.66%",
-      padding: "10px",
-      overflow: "auto"
-    }
-
+      width: '91.66%",
+      padding: '10px',
+      overflow: 'auto',
+    }; */
     const col12 = {
-      width: "100%",
-      padding: "3px",
-      overflow: "auto"
-    }
-
+      width: '100%',
+      padding: '3px',
+      overflow: 'auto',
+    };
     const col122 = {
-      width: "100%",
-      height: ".5vh",
-      background: "black"
-
-    }
-
-    const style = {
-      margin: 12
-    }
-
+      width: '100%',
+      height: '.5vh',
+      background: 'black',
+    };
+ /* const style = {
+      margin: 12,
+    };
     const tabChildNewText = {
       width: '11.1%',
       display: 'inline-block',
@@ -158,11 +140,11 @@ export default class StoreFront extends React.PureComponent {
       letterSpacing: '2.5px',
       fontSize: '13px',
       color: 'white',
-    };
+    }; */
     const tabChildNewTextz = {
       width: '11.1%',
       display: 'inline-block',
-      /*border: '1px solid #999999',*/
+   /* border: '1px solid #999999', */
       paddingTop: '1vh',
       fontFamily: 'Monteserrat',
       fontWeight: 'Bold',
@@ -180,11 +162,13 @@ export default class StoreFront extends React.PureComponent {
     return (
 
       <div>
-        <Helmet title="StoreFront" meta={[{
+        <Helmet
+          title="StoreFront" meta={[{
             name: 'description',
-            content: 'Description of StoreFront'
-          }
-        ]}/>
+            content: 'Description of StoreFront',
+          },
+          ]}
+        />
         <header></header>
 
         <main>
@@ -194,30 +178,36 @@ export default class StoreFront extends React.PureComponent {
 
             <Responsive minDeviceWidth={1024}>
 
-            <div>
-{/*TODO*/}
-              <div style={tabChildNewTextz}>
-                  <img style={{
-                    borderRadius: "10px",
-                    alignItem: "left",
-                  }} src={botPic} alt=""/></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-              <div style={tabChildNewTextz}></div>
-            </div>
+              <div>
+                {/* TODO */}
+                <div style={tabChildNewTextz}>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      alignItem: 'left',
+                    }} src={botPic} alt=""
+                  />
+                </div>
+                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}></div>
+                <div style={tabChildNewTextz}></div>
+              </div>
+
               <div style={col122}></div>
               <div style={row}>
                 <div style={col12}>
-                  <img style={{
-                    borderRadius: "10px",
-                    width: "auto",
-                    height: "auto"
-                  }} src={botPic} alt=""/>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      width: 'auto',
+                      height: 'auto',
+                    }} src={botPic} alt=""
+                  />
                 </div>
               </div>
             </Responsive>
@@ -225,24 +215,25 @@ export default class StoreFront extends React.PureComponent {
             <Responsive maxDeviceWidth={1023}>
               <div style={rowMobile}>
                 <div style={col12}>
-                  <img style={{
-                    borderRadius: "10px",
-                    width: "99vw",
-                    height: "300px"
-                  }} src="https://0opa1vxjlj-flywheel.netdna-ssl.com/wp-content/uploads/2015/10/sacramento-wordpress-web-development.jpg" alt=""/>
-
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      width: '99vw',
+                      height: '300px',
+                    }} src="https://0opa1vxjlj-flywheel.netdna-ssl.com/wp-content/uploads/2015/10/sacramento-wordpress-web-development.jpg" alt=""/>
                 </div>
               </div>
             </Responsive>
 
             <Responsive minDeviceWidth={1024}>
               <div style={row}>
-                <div style={{
-                  col2,
-                  fontSize: "1.3em",
-                  fontFamily: "tahoma"
-                }}>
-
+                <div
+                  style={{
+                    col2,
+                    fontSize: '1.3em',
+                    fontFamily: 'tahoma',
+                  }}
+                >
                   test
                 </div>
               </div>
