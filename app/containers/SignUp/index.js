@@ -3,11 +3,10 @@
  * SignUp
  *
  */
-
 import React from 'react';
 import Helmet from 'react-helmet';
+import NavBar from 'components/NavBar';
 import Responsive from 'react-responsive';
-import LayoutStyle from 'components/LayoutStyle';
 import RaisedButton from 'material-ui/RaisedButton';
 export default class SignIn extends React.PureComponent {
   constructor(props) {
@@ -56,17 +55,16 @@ export default class SignIn extends React.PureComponent {
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
-      background: '#607D8B',
+      background: '#000000',
     };
     const backgroundContentBox = {
       display: 'flex',
-      justifyContent: 'center',
       flexDirection: 'column',
-      margin: '0 auto',
-      /* marginLeft: '10%', */
-      marginTop: '3%',
-      background: '#ECEFF1',
-      width: '90%',
+      marginTop: '.5%',
+      marginLeft: '.5%',
+      background: '#FFFFFF',
+      width: '98%',
+      height: '100%',
     };
     const titleBox = {
       marginTop: '4%',
@@ -81,8 +79,8 @@ export default class SignIn extends React.PureComponent {
     const titleStyle = {
       fontFamily: 'Source Sans Pro',
       textAlign: 'center',
-      color: 'black',
       fontSize: '2.1em',
+      color: 'black',
       fontStyle: 'light',
       fontWeight: '400',
       textTransform: 'uppercase',
@@ -137,10 +135,7 @@ export default class SignIn extends React.PureComponent {
           },
           ]}
         />
-        <header>
-          <LayoutStyle />
-        </header>
-
+        <NavBar />
         <Responsive minDeviceWidth={1024}>
           <main style={backgroundStyle}>
             <div style={backgroundContentBox}>

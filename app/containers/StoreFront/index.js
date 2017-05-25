@@ -3,17 +3,29 @@
  * StoreFront
  *
  */
-
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Responsive from 'react-responsive';
+import NavBar from 'components/NavBar';
 /* import heroImage from '../images/sumomasklogotmjpg.jpg'; */
-import botPic from '../images/SRL_head.png';
-import botLogo from '../images/sum1.png';
-
 export default class StoreFront extends React.PureComponent {
   render() {
+    const backgroundStyle = {
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%',
+      background: '#000000',
+    };
+    const backgroundContentBox = {
+      display: 'flex',
+      flexDirection: 'column',
+      marginTop: '.5%',
+      marginLeft: '.5%',
+      background: '#FFFFFF',
+      width: '98%',
+      height: '100vh',
+    };
     const grid = {
       margin: '0 auto',
    /* maxWidth: '1400px', */
@@ -29,28 +41,6 @@ export default class StoreFront extends React.PureComponent {
       width: '100%',
       display: 'flex',
       flexDirection: 'row',
-      /*overflow: 'auto'*/
-    };
-    const rowDo = {
-      width: '45%',
-      display: 'flex',
-      flexDirection: 'row',
-      background: '#BDBEC0',
-      /*overflow: 'auto'*/
-    };
-    const rowYo = {
-      width: '55%',
-      display: 'flex',
-      flexDirection: 'row',
-      background: '#BDBEC0',
-      /*overflow: 'auto'*/
-    };
-    const rowTho = {
-      width: '100%',
-      height: '100px',
-      display: 'flex',
-      flexDirection: 'row',
-      background: '#BDBEC0',
       /*overflow: 'auto'*/
     };
     const rowMobile = {
@@ -142,55 +132,10 @@ export default class StoreFront extends React.PureComponent {
       padding: '3px',
       overflow: 'auto',
     };
-    const col122 = {
+    const borderStyle = {
       width: '100%',
       height: '.2vh',
       background: 'black',
-    };
- /* const style = {
-      margin: 12,
-    };
-    const tabChildNewText = {
-      width: '11.1%',
-      display: 'inline-block',
-      border: '1px solid #999999',
-      paddingTop: '1vh',
-      fontFamily: 'Monteserrat',
-      fontWeight: 'Bold',
-      verticalAlign: 'middle',
-      textAlign: 'center',
-      textTransform: 'uppercase',
-      letterSpacing: '2.5px',
-      fontSize: '13px',
-      color: 'white',
-    }; */
-    const tabChildNewTextz = {
-      display: 'inline-block',
-      background: '#BDBEC0',
-      margin: '15px',
-      paddingTop: '35px',
-   /* border: '1px solid #999999', */
-      fontFamily: 'Monteserrat',
-      fontWeight: 'Bold',
-   /* textAlign: 'center',*/
-      textTransform: 'uppercase',
-      letterSpacing: '2.5px',
-      fontSize: '.85em',
-      color: 'white',
-      /*borderTop: '.5px solid black',
-      borderLeft: '.5px solid black',
-      borderBottom: '.5px solid black',
-      borderRight: '.5px solid black',*/
-    };
- /* const navStyle = {
-      width: '100%',
-    }; */
-     const navStyleText = {
-      /*margin: '0 auto',*/
-      opacity: '0.5%',
-      /*textAlign: 'center',*/
-      textShadow: '1px 0px .5px #000, 1px -.5px -.5px #000, 1px .5px .5px #000',
-
     };
     return (
 
@@ -203,179 +148,143 @@ export default class StoreFront extends React.PureComponent {
           ]}
         />
         <header></header>
+        <NavBar />
+        <main style={backgroundStyle}>
+          <div style={backgroundContentBox}>
+            <div style={grid}>
+              <div style={borderStyle}></div>
 
+              <Responsive minDeviceWidth={1024}>
+                <div style={row}>
+                  <div style={col12}>
+                    {/* <img
+                      style={{
+                        borderRadius: '10px',
+                        width: 'auto',
+                        height: 'auto',
+                      }} src={botPic} alt=""
+                    /> */}
+                  </div>
+                </div>
+              </Responsive>
 
-        <main>
-          <div style={grid}>
-            <div style={col122}></div>
+              <Responsive maxDeviceWidth={1023}>
+                <div style={rowMobile}>
+                  <div style={col12}>
+                    <img
+                      style={{
+                        borderRadius: '10px',
+                        width: '99vw',
+                        height: '300px',
+                      }} src="https://0opa1vxjlj-flywheel.netdna-ssl.com/wp-content/uploads/2015/10/sacramento-wordpress-web-development.jpg" alt=""
+                    />
+                  </div>
+                </div>
+              </Responsive>
 
-            <Responsive minDeviceWidth={1024}>
-              <div style={rowTho}>
-                <div style={rowDo}>
-                  {/* TODO */}
-                  <img
+              <Responsive minDeviceWidth={1024}>
+                <div style={row}>
+                  <div
                     style={{
-                      width: '22.2%',
-                      height: '100px',
-                    /* borderRadius: '10px',*/
-                      alignItem: 'left',
-                    }} src={botPic} alt=""
-                  />
-                  <img
+                      col2,
+                      fontSize: '1.3em',
+                      fontFamily: 'tahoma',
+                    }}
+                  >
+                    test
+                  </div>
+                </div>
+                <div style={borderStyle}></div>
+
+              </Responsive>
+
+              <Responsive maxDeviceWidth={1023}>
+                <div style={rowMobile}>
+                  <div
                     style={{
-                      paddingLeft: '5%',
-                      paddingTop: '2%',
-                      width: '71%',
-                      height: '71px',
-                    /* borderRadius: '10px',*/
-                      alignItem: 'left',
-                    }} src={botLogo} alt=""
-                  />
+                      col2,
+                      fontSize: '1.3em',
+                      fontFamily: 'tahoma',
+                    }}
+                  >
+                    test
+                  </div>
                 </div>
-                <div style={rowYo}>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>tournament</div></div>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>home</div></div>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>about</div></div>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>kits</div></div>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>the arena</div></div>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>the cloud</div></div>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>News</div></div>
-                  <div style={tabChildNewTextz}><div style={navStyleText}>Contact</div></div>
-                </div>
-              </div>
+              </Responsive>
 
-              <div style={col122}></div>
-              <div style={row}>
-                <div style={col12}>
-                  {/* <img
-                    style={{
-                      borderRadius: '10px',
-                      width: 'auto',
-                      height: 'auto',
-                    }} src={botPic} alt=""
-                  /> */}
-                </div>
-              </div>
-            </Responsive>
+              <Responsive minDeviceWidth={1024}>
+                <div style={row}>
+                  <div style={col4}>
+                    <img
+                      style={{
+                        borderRadius: '10px',
+                        height: '22.33vh',
+                        width: '22.33vw',
+                        /*alignContent: 'center'*/
+                      }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
+                    />
 
-            <Responsive maxDeviceWidth={1023}>
-              <div style={rowMobile}>
-                <div style={col12}>
-                  <img
-                    style={{
-                      borderRadius: '10px',
-                      width: '99vw',
-                      height: '300px',
-                    }} src="https://0opa1vxjlj-flywheel.netdna-ssl.com/wp-content/uploads/2015/10/sacramento-wordpress-web-development.jpg" alt=""
-                  />
-                </div>
-              </div>
-            </Responsive>
+                  </div>
 
-            <Responsive minDeviceWidth={1024}>
-              <div style={row}>
-                <div
-                  style={{
-                    col2,
-                    fontSize: '1.3em',
-                    fontFamily: 'tahoma',
-                  }}
-                >
-                  test
-                </div>
-              </div>
-              <div style={col122}></div>
+                  <div style={col4}>
+                    <img
+                      style={{
+                        borderRadius: '10px',
+                        height: '22.33vh',
+                        width: '22.33vw',
+                        /* alignContent: 'center'*/
+                      }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
+                    />
+                  </div>
 
-            </Responsive>
+                  <div style={col4}>
 
-            <Responsive maxDeviceWidth={1023}>
-              <div style={rowMobile}>
-                <div
-                  style={{
-                    col2,
-                    fontSize: '1.3em',
-                    fontFamily: 'tahoma',
-                  }}
-                >
-                  test
-                </div>
-              </div>
-            </Responsive>
-
-            <Responsive minDeviceWidth={1024}>
-              <div style={row}>
-                <div style={col4}>
-                  <img
-                    style={{
-                      borderRadius: '10px',
-                      height: '22.33vh',
-                      width: '22.33vw',
-                      /*alignContent: 'center'*/
-                    }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
-                  />
-
+                    <img
+                      style={{
+                        borderRadius: '10px',
+                        height: '22.33vh',
+                        width: '22.33vw',
+                        /* alignContent: 'center' */
+                      }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
+                    />
+                  </div>
                 </div>
 
-                <div style={col4}>
-                  <img
-                    style={{
-                      borderRadius: '10px',
-                      height: '22.33vh',
-                      width: '22.33vw',
-                      /* alignContent: 'center'*/
-                    }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
-                  />
+              </Responsive>
+
+              <Responsive maxDeviceWidth={1023}>
+                <div style={rowMobile}>
+                  <div style={col4Mobile}>
+                    <img
+                      style={{
+                        height: '22.33vh',
+                        width: '100%',
+                      }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
+                    />
+                  </div>
+
+                  <div style={col4Mobile}>
+                    <img
+                      style={{
+                        height: '22.33vh',
+                        width: '100%',
+                      }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
+                    />
+                  </div>
+
+                  <div style={col4Mobile}>
+                    <img
+                      style={{
+                        height: '22.33vh',
+                        width: '100%',
+                      }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
+                    />
+                  </div>
                 </div>
-
-                <div style={col4}>
-
-                  <img
-                    style={{
-                      borderRadius: '10px',
-                      height: '22.33vh',
-                      width: '22.33vw',
-                      /* alignContent: 'center' */
-                    }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
-                  />
-                </div>
-              </div>
-
-            </Responsive>
-
-            <Responsive maxDeviceWidth={1023}>
-              <div style={rowMobile}>
-                <div style={col4Mobile}>
-                  <img
-                    style={{
-                      height: '22.33vh',
-                      width: '100%',
-                    }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
-                  />
-                </div>
-
-                <div style={col4Mobile}>
-                  <img
-                    style={{
-                      height: '22.33vh',
-                      width: '100%',
-                    }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
-                  />
-                </div>
-
-                <div style={col4Mobile}>
-                  <img
-                    style={{
-                      height: '22.33vh',
-                      width: '100%',
-                    }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
-                  />
-                </div>
-              </div>
-            </Responsive>
-
+              </Responsive>
+            </div>
           </div>
         </main>
-
       </div>
     );
   }

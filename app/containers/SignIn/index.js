@@ -7,7 +7,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Responsive from 'react-responsive';
-import LayoutStyle from 'components/LayoutStyle';
+import NavBar from 'components/NavBar';
 import RaisedButton from 'material-ui/RaisedButton';
 export default class SignIn extends React.PureComponent {
   constructor(props) {
@@ -54,17 +54,17 @@ export default class SignIn extends React.PureComponent {
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
-      background: '#408193',
+      background: '#000000',
     };
     const backgroundContentBox = {
       display: 'flex',
-      justifyContent: 'center',
       flexDirection: 'column',
-      margin: '0 auto',
-      /* marginLeft: '10%', */
-      marginTop: '3%',
-      background: '#F5F5F5',
-      width: '90%',
+      /*margin: '0 auto', */
+      marginTop: '.5%',
+      marginLeft: '.5%',
+      background: '#FFFFFF',
+      width: '100%',
+      height: '100vh',
     };
     const titleBox = {
       marginTop: '4%',
@@ -129,10 +129,7 @@ export default class SignIn extends React.PureComponent {
           },
           ]}
         />
-        <header>
-          <LayoutStyle />
-        </header>
-
+        <NavBar />
         <Responsive minDeviceWidth={1024}>
           <main style={backgroundStyle}>
             <div style={backgroundContentBox}>

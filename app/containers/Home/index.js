@@ -5,336 +5,273 @@
  */
 import React from 'react';
 import Helmet from 'react-helmet';
-import RaisedButton from 'material-ui/RaisedButton';
-import Responsive from 'react-responsive';
 import { Link } from 'react-router';
-import FontIcon from 'material-ui/FontIcon';
-import AppBar from 'material-ui/AppBar';
-import Paper from 'material-ui/Paper';
-import MenuItem from 'material-ui/MenuItem';
-import Menu from 'material-ui/Menu';
-import heroImage from '../images/sumomasklogotmjpg.jpg';
-import { northwesternPurple, northwesternPurple10 } from '../colors';
-import studentImage from '../images/Surprised.svg';
-import screenshot1 from '../images/Screenshot1.png';
-import screenshot2 from '../images/Screenshot2.gif';
-import screenshot3 from '../images/Screenshot3.gif';
-import browse from '../images/Browse.png';
-import search from '../images/Search.png';
-import calendarLogo from '../images/logo_calendar_128px.png';
-import screenshot4 from '../images/MultipleCalendars.gif';
-import regalLogo from '../images/wreath.png';
-import facebookLogo from '../images/FB-f-Logo__blue_144.png';
-
+import Responsive from 'react-responsive';
+import NavBar from 'components/NavBar';
+/* import heroImage from '../images/sumomasklogotmjpg.jpg'; */
 export default class Home extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
- /* token: sessionStorage.getItem('token'), */
-      menuOpen: false,
-    };
-  }
-  handleMenu = () => {
-    if (this.state.menuOpen === false) {
-      this.setState({ menuOpen: true });
-    } else if (this.state.menuOpen === true) {
-      this.setState({ menuOpen: false });
-    }
-  }
-  showMenu = () => {
-    const styleMobile = {
-      display: 'inline-block',
-      margin: '16px 32px 16px 0',
-    };
-    const paperStyle = {
-      display: 'inline-block',
-      position: 'absolute',
-      margin: '16px 32px 16px 0',
-    };
-    if (this.state.menuOpen === true) {
-      return (
-        <div>
-          <Responsive minDeviceWidth={1024}>
-            <Paper style={paperStyle}>
-              <Menu>
-                <MenuItem primaryText="Home" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="About us" containerElement={<Link to="/SignUp"></Link>} />
-                <MenuItem primaryText="Browse" containerElement={<Link to="/SignIn"></Link>} />
-                <MenuItem primaryText="Contribute" containerElement={<Link to="/Dashboard"></Link>} />
-                <MenuItem primaryText="Our Friends" containerElement={<Link to="/StoreFront"></Link>} />
-              </Menu>
-            </Paper>
-          </Responsive>
-          <Responsive maxDeviceWidth={1023}>
-            <Paper style={styleMobile}>
-              <Menu>
-                <MenuItem primaryText="Home" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="About us" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="Browse" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="Contribute" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="Our Friends" containerElement={<Link to="/"></Link>} />
-                <MenuItem primaryText="Log in" containerElement={<Link to="/StoreFront"></Link>} />
-              </Menu>
-            </Paper>
-          </Responsive>
-        </div>
-      );
-    }
-  }
-
   render() {
-    const style = {
-      hero: {
-        backgroundImage: `url(${heroImage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        minHeight: '400px',
-        backgroundPosition: 'center',
-        backgroundSize: 'contain',
-      },
-      heroText: {
-        position: 'absolute',
-        top: '0px',
-        left: '0px',
-        height: '600px',
-        width: '100%',
-        textAlign: 'center',
-        color: 'white',
-        paddingTop: '280px',
-      },
-      heroTitle: {
-        fontSize: '50px',
-      },
-      sectionOdd: {
-        padding: '50px',
-      },
-      sectionEven: {
-        padding: '50px',
-        backgroundColor: northwesternPurple10,
-      },
-      purpleHeader: {
-        color: northwesternPurple,
-        marginBottom: '50px',
-      },
-      centeredPurpleHeader: {
-        color: northwesternPurple,
-        marginBottom: '50px',
-        textAlign: 'center',
-      },
-      divideTwo: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-      },
-      studentImage: {
-        width: '400px',
-      },
-      screenshot: {
-        width: '600px',
-      },
-      screenshot2: {
-        width: '700px',
-      },
-      blurbs: {
-        marginLeft: '50px',
-        marginRight: '50px',
-        marginBottom: '50px',
-      },
-      compare: {
-        width: '300px',
-      },
-      compareItem: {
-        textAlign: 'center',
-        marginTop: '30px',
-        marginBottom: '50px',
-      },
-      compareTitle: {
-        marginTop: '20px',
-        marginBottom: '20px',
-      },
-      regalLogo: {
-        width: '250px',
-      },
-      logos: {
-        width: '128px',
-        height: '128px',
-      },
-      learnMoreButton: {
-        display: 'block',
-        margin: 'auto',
-        width: '120px',
-      },
-      learnMoreButtonWrapper: {
-        padding: '20px',
-      },
-      colorStyle: {
-        background: '#000000',
-      },
-
-      navStyleMobile: {
-        fontFamily: 'Trebuchet MS',
-        fontStyle: 'light',
-        fontWeight: '400',
-        fontSize: '1.1em',
-        textTransform: 'uppercase',
-        background: '#000000',
-      },
+    const grid = {
+      margin: '0 auto',
+   /* maxWidth: '1400px', */
+      width: '100%',
     };
 
+  /* const gridMobile = {
+      margin: '0 auto',
+      maxWidth: '1023px',
+      width: '100%',
+    }; */
+    const row = {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'row',
+      /*overflow: 'auto'*/
+    };
+    const rowMobile = {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
+  /* const col1 = {
+      width: '8.33%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+      background: 'blue',
+    }; */
+    const col2 = {
+      width: '16.66%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
+
+  /* const col3 = {
+      width: '25%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    }; */
+
+    const col4 = {
+      width: '30.33%',
+      padding: '1px',
+      overflow: 'auto',
+    };
+
+    const col4Mobile = {
+      width: '100%',
+      padding: '5px',
+      overflow: 'auto',
+    };
+
+  /* const col5 = {
+      width: '41.66%',
+      padding: '10px',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
+    const col6 = {
+      width: '50%',
+      flexWrap: 'wrap',
+      overflow: 'auto',
+    };
+    const col62 = {
+      background: 'rgb(245,250,245)',
+      width: '50%',
+      padding: '2px',
+      textAlign: 'right',
+      fontFamily: 'consolas',
+      overflow: 'auto',
+    };
+    const col7 = {
+      width: '58.33%',
+      padding: '10px',
+      overflow: 'auto',
+    };
+    const col8 = {
+      width: '66.66%',
+      padding: '10px',
+      overflow: 'auto'
+    };
+    const col9 = {
+      width: '75%',
+      padding: '10px',
+      overflow: 'auto',
+    };
+    const col10 = {
+      width: '83.33%',
+      padding: '10px',
+      overflow: 'auto',
+    };
+    const col11 = {
+      width: '91.66%',
+      padding: '10px',
+      overflow: 'auto',
+    }; */
+    const col12 = {
+      width: '100%',
+      padding: '3px',
+      overflow: 'auto',
+    };
+    const borderStyle = {
+      width: '100%',
+      height: '.2vh',
+      background: 'black',
+    };
     return (
+
       <div>
-        <Helmet title="Home" meta={[{ name: 'description', content: 'Description of Home' }]} />
-        <div>
-          <AppBar onLeftIconButtonTouchTap={this.handleMenu} title="Sumo Robot League" titleStyle={style.navStyleMobile} style={style.colorStyle} />
-          {this.showMenu()}
-        </div>
-        <div style={style.hero}></div>
-        <div style={style.heroText}>
-          {/* <h1 style={style.heroTitle}>Simple. Fast. Visual.</h1>
-          <h2>Course planning for Northwestern University.</h2>*/}
-        </div>
+        <Helmet
+          title="Home" meta={[{
+            name: 'description',
+            content: 'Description of Home',
+          },
+          ]}
+        />
+        <header></header>
 
-        <div style={style.sectionOdd}>
-          <h1 style={style.purpleHeader}>BUILDING THE PROGRAMMERS OF THE FUTURE</h1>
-          <div style={style.divideTwo}>
-            <div style={style.blurbs}>
-              <h3>No more drawing out your schedules on paper.</h3>
-              <h3>No more clunky excel spreadsheets.</h3>
-              <h3>Plan out next quarter's schedule the way it always should have been.</h3>
-            </div>
-            <img src={studentImage} alt="Student with a laptop" style={style.studentImage} />
-          </div>
-        </div>
 
-        <div style={style.sectionEven}>
-          <h1 style={style.centeredPurpleHeader}>
-            Serif.nu is <span style={{ fontStyle: 'italic' }}>Simple</span>.
-          </h1>
-          <div style={style.divideTwo}>
-            <img src={screenshot1} alt="Serif screenshot" style={style.screenshot} />
+        <main>
+          <div style={grid}>
+            <div style={borderStyle}></div>
 
-            <div style={style.blurbs}>
-              <h3>Everything you need to visualize your schedule,</h3>
-              <h3>on one page.</h3>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div style={style.divideTwo}>
-
-            <div style={style.compareItem}>
-              <h2 style={style.compareTitle}>Search</h2>
-              <img src={search} alt="Serif search" style={style.compare} />
-            </div>
-
-            <div style={style.compareItem}>
-              <h2 style={style.purpleHeader}>Have it your way.</h2>
-            </div>
-
-            <div style={style.compareItem}>
-              <h2 style={style.compareTitle}>Browse</h2>
-              <img src={browse} alt="Serif browse" style={style.compare} />
-            </div>
-
-          </div>
-        </div>
-
-        <div style={style.sectionEven}>
-          <h1 style={style.centeredPurpleHeader}>
-            Serif.nu is <span style={{ fontStyle: 'italic' }}>Fast</span>.
-          </h1>
-          <div style={style.divideTwo}>
-            <div style={style.blurbs}>
-              <h3>Browse? Search? Edit?</h3>
-              <h3>All of it only a click away.</h3>
-            </div>
-            <img src={screenshot2} alt="Serif screenshot" style={style.screenshot2} />
-          </div>
-        </div>
-
-        <div style={style.sectionOdd}>
-          <div style={style.divideTwo}>
-            <img src={screenshot4} alt="Serif screenshot" style={style.screenshot2} />
-            <div style={style.blurbs}>
-              <h3>Can't decide between two schedules?</h3>
-              <h3>Make both.</h3>
-            </div>
-          </div>
-        </div>
-
-        <div style={style.sectionEven}>
-          <h1 style={style.centeredPurpleHeader}>
-            Serif.nu is <span style={{ fontStyle: 'italic' }}>Visual</span>.
-          </h1>
-          <div style={style.divideTwo}>
-            <div style={style.blurbs}>
-              <h3>We know CAESAR's shopping cart isn't very conducive to laying out the week.</h3>
-              <h3>Visualize your time from start to finish of your planning process.</h3>
-            </div>
-            <img src={screenshot3} alt="Serif screenshot" style={style.screenshot2} />
-          </div>
-        </div>
-
-        <div style={style.sectionOdd}>
-          <div style={style.divideTwo}>
-            <div style={style.blurbs}>
-              <h3>With just a click,</h3>
-              <h3>add your schedule to your Google Calendar</h3>
-              <h3>or share it on Facebook!</h3>
-            </div>
-            <img style={style.logos} src={calendarLogo} alt="Google Calendar Logo" />
-            <img style={style.logos} src={facebookLogo} alt="Facebook Logo" />
-          </div>
-        </div>
-
-        <div style={style.sectionEven}>
-          <h1 style={style.centeredPurpleHeader}>
-            Send courses to CAESAR using Regal
-          </h1>
-          <div style={style.divideTwo}>
-            <img style={style.regalLogo} src={regalLogo} alt="Regal Logo" />
-            <div style={style.blurbs}>
-              <h3>Using Google Chrome?</h3>
-              <h3>Install <a href="http://bit.ly/regalnu">Regal</a> and send your Serif.nu courses to CAESAR with one click.</h3>
-              <div style={style.learnMoreButtonWrapper}>
-                <Link style={style.learnMoreButton} to="/regal"><RaisedButton label="Learn More" primary /></Link>
+            <Responsive minDeviceWidth={1024}>
+              <NavBar />
+              <div style={row}>
+                <div style={col12}>
+                  {/* <img
+                    style={{
+                      borderRadius: '10px',
+                      width: 'auto',
+                      height: 'auto',
+                    }} src={botPic} alt=""
+                  /> */}
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </Responsive>
 
-        <div style={style.sectionOdd}>
-          <div style={style.divideTwo}> {/* Can be used to divide into more than two sections */}
-            <div style={style.compareItem}>
-              <h2 style={style.centeredPurpleHeader}>
-                Questions?
-              </h2>
-              <Link to="/faq"><RaisedButton label="FAQ" primary /></Link>
-            </div>
-            <div style={style.compareItem}>
-              <h2 style={style.centeredPurpleHeader}>
-                Found a bug?
-              </h2>
-              <Link to="/bug"><RaisedButton label="Report a bug" primary /></Link>
-            </div>
-            <div style={style.compareItem}>
-              <h2 style={style.centeredPurpleHeader}>
-                Reach out to us.
-              </h2>
-              <Link to="/contact"><RaisedButton label="Contact" primary /></Link>
-            </div>
-            <div style={style.compareItem}>
-              <h2 style={style.centeredPurpleHeader}>
-                Like us on Facebook!
-              </h2>
-              <a href="https://www.facebook.com/nuserif/">
-                <RaisedButton icon={<FontIcon className="fa fa-facebook-official" />} primary />
-              </a>
-            </div>
+            <Responsive maxDeviceWidth={1023}>
+              <div style={rowMobile}>
+                <div style={col12}>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      width: '99vw',
+                      height: '300px',
+                    }} src="https://0opa1vxjlj-flywheel.netdna-ssl.com/wp-content/uploads/2015/10/sacramento-wordpress-web-development.jpg" alt=""
+                  />
+                </div>
+              </div>
+            </Responsive>
+
+            <Responsive minDeviceWidth={1024}>
+              <div style={row}>
+                <div
+                  style={{
+                    col2,
+                    fontSize: '1.3em',
+                    fontFamily: 'tahoma',
+                  }}
+                >
+                  test
+                </div>
+              </div>
+              <div style={borderStyle}></div>
+
+            </Responsive>
+
+            <Responsive maxDeviceWidth={1023}>
+              <div style={rowMobile}>
+                <div
+                  style={{
+                    col2,
+                    fontSize: '1.3em',
+                    fontFamily: 'tahoma',
+                  }}
+                >
+                  test
+                </div>
+              </div>
+            </Responsive>
+
+            <Responsive minDeviceWidth={1024}>
+              <div style={row}>
+                <div style={col4}>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      height: '22.33vh',
+                      width: '22.33vw',
+                      /*alignContent: 'center'*/
+                    }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
+                  />
+
+                </div>
+
+                <div style={col4}>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      height: '22.33vh',
+                      width: '22.33vw',
+                      /* alignContent: 'center'*/
+                    }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
+                  />
+                </div>
+
+                <div style={col4}>
+
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      height: '22.33vh',
+                      width: '22.33vw',
+                      /* alignContent: 'center' */
+                    }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
+                  />
+                </div>
+              </div>
+
+            </Responsive>
+
+            <Responsive maxDeviceWidth={1023}>
+              <div style={rowMobile}>
+                <div style={col4Mobile}>
+                  <img
+                    style={{
+                      height: '22.33vh',
+                      width: '100%',
+                    }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
+                  />
+                </div>
+
+                <div style={col4Mobile}>
+                  <img
+                    style={{
+                      height: '22.33vh',
+                      width: '100%',
+                    }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
+                  />
+                </div>
+
+                <div style={col4Mobile}>
+                  <img
+                    style={{
+                      height: '22.33vh',
+                      width: '100%',
+                    }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
+                  />
+                </div>
+              </div>
+            </Responsive>
+
           </div>
-        </div>
+        </main>
+
       </div>
     );
   }
