@@ -10,6 +10,7 @@ import { Link } from 'react-router';
 import Responsive from 'react-responsive';
 /* import heroImage from '../images/sumomasklogotmjpg.jpg'; */
 import botPic from '../images/SRL_head.png';
+import botLogo from '../images/sum1.png';
 
 export default class StoreFront extends React.PureComponent {
   render() {
@@ -28,6 +29,28 @@ export default class StoreFront extends React.PureComponent {
       width: '100%',
       display: 'flex',
       flexDirection: 'row',
+      /*overflow: 'auto'*/
+    };
+    const rowDo = {
+      width: '45%',
+      display: 'flex',
+      flexDirection: 'row',
+      background: '#BDBEC0',
+      /*overflow: 'auto'*/
+    };
+    const rowYo = {
+      width: '55%',
+      display: 'flex',
+      flexDirection: 'row',
+      background: '#BDBEC0',
+      /*overflow: 'auto'*/
+    };
+    const rowTho = {
+      width: '100%',
+      height: '100px',
+      display: 'flex',
+      flexDirection: 'row',
+      background: '#BDBEC0',
       /*overflow: 'auto'*/
     };
     const rowMobile = {
@@ -142,18 +165,17 @@ export default class StoreFront extends React.PureComponent {
       color: 'white',
     }; */
     const tabChildNewTextz = {
-      width: '11.1%',
       display: 'inline-block',
       background: '#BDBEC0',
+      margin: '15px',
+      paddingTop: '35px',
    /* border: '1px solid #999999', */
-      paddingTop: '1vh',
       fontFamily: 'Monteserrat',
       fontWeight: 'Bold',
-      verticalAlign: 'middle',
    /* textAlign: 'center',*/
       textTransform: 'uppercase',
       letterSpacing: '2.5px',
-      fontSize: '.95em',
+      fontSize: '.85em',
       color: 'white',
       /*borderTop: '.5px solid black',
       borderLeft: '.5px solid black',
@@ -163,12 +185,11 @@ export default class StoreFront extends React.PureComponent {
  /* const navStyle = {
       width: '100%',
     }; */
-    const navStyleText = {
-      margin: '0 auto',
+     const navStyleText = {
+      /*margin: '0 auto',*/
       opacity: '0.5%',
-      textAlign: 'center',
+      /*textAlign: 'center',*/
       textShadow: '1px 0px .5px #000, 1px -.5px -.5px #000, 1px .5px .5px #000',
-      paddingTop: '20%',
 
     };
     return (
@@ -183,32 +204,44 @@ export default class StoreFront extends React.PureComponent {
         />
         <header></header>
 
-        <main>
 
+        <main>
           <div style={grid}>
             <div style={col122}></div>
 
             <Responsive minDeviceWidth={1024}>
-
-              <div style={row}>
-                {/* TODO */}
-                <img
-                  style={{
-                    width: '11.1%',
-                    background: '#BDBEC0',
-                    height: '5%',
-                  /* borderRadius: '10px',*/
-                    alignItem: 'left',
-                  }} src={botPic} alt=""
-                />
-                <div style={tabChildNewTextz}><div style={navStyleText}>tournament</div></div>
-                <div style={tabChildNewTextz}><div style={navStyleText}>home</div></div>
-                <div style={tabChildNewTextz}><div style={navStyleText}>about</div></div>
-                <div style={tabChildNewTextz}><div style={navStyleText}>kits</div></div>
-                <div style={tabChildNewTextz}><div style={navStyleText}>the arena</div></div>
-                <div style={tabChildNewTextz}><div style={navStyleText}>the cloud</div></div>
-                <div style={tabChildNewTextz}><div style={navStyleText}>News</div></div>
-                <div style={tabChildNewTextz}><div style={navStyleText}>Contact</div></div>
+              <div style={rowTho}>
+                <div style={rowDo}>
+                  {/* TODO */}
+                  <img
+                    style={{
+                      width: '22.2%',
+                      height: '100px',
+                    /* borderRadius: '10px',*/
+                      alignItem: 'left',
+                    }} src={botPic} alt=""
+                  />
+                  <img
+                    style={{
+                      paddingLeft: '5%',
+                      paddingTop: '2%',
+                      width: '71%',
+                      height: '71px',
+                    /* borderRadius: '10px',*/
+                      alignItem: 'left',
+                    }} src={botLogo} alt=""
+                  />
+                </div>
+                <div style={rowYo}>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>tournament</div></div>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>home</div></div>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>about</div></div>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>kits</div></div>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>the arena</div></div>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>the cloud</div></div>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>News</div></div>
+                  <div style={tabChildNewTextz}><div style={navStyleText}>Contact</div></div>
+                </div>
               </div>
 
               <div style={col122}></div>
