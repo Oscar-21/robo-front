@@ -15,15 +15,15 @@ export default class SignIn extends React.PureComponent {
     this.state = {
       email: '',
       password: '',
-      token: ''
+      token: '',
     };
   }
 
   handleEmail = (event) => {
-    this.setState({email: event.target.value});
+    this.setState({ email: event.target.value });
   }
   handlePassword = (event) => {
-    this.setState({password: event.target.value});
+    this.setState({ password: event.target.value });
   }
 
   signIn = () => {
@@ -32,7 +32,7 @@ export default class SignIn extends React.PureComponent {
     data.append('password', this.state.password);
     fetch('http://localhost:8000/api/signIn', {
       method: 'post',
-      body: data
+      body: data,
     }).then((response) => {
       return response.json();
     }).then((json) => {
@@ -45,7 +45,7 @@ export default class SignIn extends React.PureComponent {
         sessionStorage.setItem('token', JSON.stringify(json.token));
         /* this.setState({token:JSON.stringify(json.token)}); */
         /* this.setState({token:json.token}); */
-        this.setState({token: sessionStorage.getItem('token')});
+        this.setState({ token: sessionStorage.getItem('token') });
       }
     });
   }
@@ -54,7 +54,7 @@ export default class SignIn extends React.PureComponent {
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
-      background: '#408193'
+      background: '#408193',
     };
     const backgroundContentBox = {
       display: 'flex',
@@ -64,7 +64,7 @@ export default class SignIn extends React.PureComponent {
       /* marginLeft: '10%', */
       marginTop: '3%',
       background: '#F5F5F5',
-      width: '90%'
+      width: '90%',
     };
     const titleBox = {
       marginTop: '4%',
@@ -74,7 +74,7 @@ export default class SignIn extends React.PureComponent {
       paddingTop: '1.5%',
       paddingBottom: '1.5%',
       borderTop: '2px solid gray',
-      borderBottom: '2px solid gray'
+      borderBottom: '2px solid gray',
     };
     const titleStyle = {
       fontFamily: 'Source Sans Pro',
@@ -84,7 +84,7 @@ export default class SignIn extends React.PureComponent {
       fontStyle: 'light',
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: '6px'
+      letterSpacing: '6px',
     };
     const titleStyleMobile = {
       fontFamily: 'Source Sans Pro',
@@ -94,18 +94,18 @@ export default class SignIn extends React.PureComponent {
       fontStyle: 'light',
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: '4px'
+      letterSpacing: '4px',
     };
     const inputStyleEmail = {
       margin: '0 auto',
       marginBottom: '.4%',
       width: '20%',
-      border: '1px solid black'
+      border: '1px solid black',
     };
     const inputStylePassword = {
       margin: '0 auto',
       width: '20%',
-      border: '1px solid black'
+      border: '1px solid black',
     };
     const buttonStyle = {
       margin: '0 auto',

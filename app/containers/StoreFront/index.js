@@ -15,8 +15,8 @@ export default class StoreFront extends React.PureComponent {
   render() {
     const grid = {
       margin: '0 auto',
-      /*maxWidth: '1400px',
-*/      width: '100%',
+   /* maxWidth: '1400px', */
+      width: '100%',
     };
 
   /* const gridMobile = {
@@ -28,7 +28,7 @@ export default class StoreFront extends React.PureComponent {
       width: '100%',
       display: 'flex',
       flexDirection: 'row',
-      /*overflow: "auto"*/
+      /*overflow: 'auto'*/
     };
     const rowMobile = {
       width: '100%',
@@ -105,12 +105,12 @@ export default class StoreFront extends React.PureComponent {
       overflow: 'auto',
     };
     const col10 = {
-      width: '83.33%",
+      width: '83.33%',
       padding: '10px',
       overflow: 'auto',
     };
     const col11 = {
-      width: '91.66%",
+      width: '91.66%',
       padding: '10px',
       overflow: 'auto',
     }; */
@@ -150,7 +150,7 @@ export default class StoreFront extends React.PureComponent {
       fontFamily: 'Monteserrat',
       fontWeight: 'Bold',
       verticalAlign: 'middle',
-      /*textAlign: 'center',*/
+   /* textAlign: 'center',*/
       textTransform: 'uppercase',
       letterSpacing: '2.5px',
       fontSize: '1.1em',
@@ -160,9 +160,9 @@ export default class StoreFront extends React.PureComponent {
       borderBottom: '.5px solid black',
       borderRight: '.5px solid black',*/
     };
-    const navStyle = {
+ /* const navStyle = {
       width: '100%',
-    };
+    }; */
     const navStyleText = {
       margin: '0 auto',
       opacity: '0.5%',
@@ -191,15 +191,15 @@ export default class StoreFront extends React.PureComponent {
 
               <div style={row}>
                 {/* TODO */}
-                  <img
-                    style={{
-                      width: '11.1%',
-                      background: '#BDBEC0',
-                      height: '5%',
-                      /*borderRadius: '10px',*/
-                      alignItem: 'left',
-                    }} src={botPic} alt=""
-                  />
+                <img
+                  style={{
+                    width: '11.1%',
+                    background: '#BDBEC0',
+                    height: '5%',
+                  /* borderRadius: '10px',*/
+                    alignItem: 'left',
+                  }} src={botPic} alt=""
+                />
                 <div style={tabChildNewTextz}><div style={navStyleText}>tournament</div></div>
                 <div style={tabChildNewTextz}><div style={navStyleText}>home</div></div>
                 <div style={tabChildNewTextz}><div style={navStyleText}>about</div></div>
@@ -213,7 +213,7 @@ export default class StoreFront extends React.PureComponent {
               <div style={col122}></div>
               <div style={row}>
                 <div style={col12}>
-                  {/*<img
+                  {/* <img
                     style={{
                       borderRadius: '10px',
                       width: 'auto',
@@ -232,7 +232,8 @@ export default class StoreFront extends React.PureComponent {
                       borderRadius: '10px',
                       width: '99vw',
                       height: '300px',
-                    }} src="https://0opa1vxjlj-flywheel.netdna-ssl.com/wp-content/uploads/2015/10/sacramento-wordpress-web-development.jpg" alt=""/>
+                    }} src="https://0opa1vxjlj-flywheel.netdna-ssl.com/wp-content/uploads/2015/10/sacramento-wordpress-web-development.jpg" alt=""
+                  />
                 </div>
               </div>
             </Responsive>
@@ -255,11 +256,13 @@ export default class StoreFront extends React.PureComponent {
 
             <Responsive maxDeviceWidth={1023}>
               <div style={rowMobile}>
-                <div style={{
-                  col2,
-                  fontSize: "1.3em",
-                  fontFamily: "tahoma"
-                }}>
+                <div
+                  style={{
+                    col2,
+                    fontSize: '1.3em',
+                    fontFamily: 'tahoma',
+                  }}
+                >
                   test
                 </div>
               </div>
@@ -268,32 +271,38 @@ export default class StoreFront extends React.PureComponent {
             <Responsive minDeviceWidth={1024}>
               <div style={row}>
                 <div style={col4}>
-                  <img style={{
-                    borderRadius: "10px",
-                    height: "22.33vh",
-                    width: "22.33vw",
-                    /*alignContent: "center"*/
-                  }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""/>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      height: '22.33vh',
+                      width: '22.33vw',
+                      /*alignContent: 'center'*/
+                    }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
+                  />
 
                 </div>
 
                 <div style={col4}>
-                  <img style={{
-                    borderRadius: "10px",
-                    height: "22.33vh",
-                    width: "22.33vw",
-                    /* alignContent: "center"*/
-                  }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""/>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      height: '22.33vh',
+                      width: '22.33vw',
+                      /* alignContent: 'center'*/
+                    }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
+                  />
                 </div>
 
                 <div style={col4}>
 
-                  <img style={{
-                    borderRadius: "10px",
-                    height: "22.33vh",
-                    width: "22.33vw",
-                    /* alignContent: "center" */
-                  }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""/>
+                  <img
+                    style={{
+                      borderRadius: '10px',
+                      height: '22.33vh',
+                      width: '22.33vw',
+                      /* alignContent: 'center' */
+                    }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
+                  />
                 </div>
               </div>
 
@@ -302,24 +311,30 @@ export default class StoreFront extends React.PureComponent {
             <Responsive maxDeviceWidth={1023}>
               <div style={rowMobile}>
                 <div style={col4Mobile}>
-                  <img style={{
-                    height: "22.33vh",
-                    width: "100%"
-                  }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""/>
+                  <img
+                    style={{
+                      height: '22.33vh',
+                      width: '100%',
+                    }} src="https://68.media.tumblr.com/4d4bf3ed103d7b72765239086211a6a9/tumblr_okly0dAWKE1vtrs37o1_1280.jpg" alt=""
+                  />
                 </div>
 
                 <div style={col4Mobile}>
-                  <img style={{
-                    height: "22.33vh",
-                    width: "100%"
-                  }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""/>
+                  <img
+                    style={{
+                      height: '22.33vh',
+                      width: '100%',
+                    }} src="https://68.media.tumblr.com/d4723a51b573ae841b6584fa70e4fba1/tumblr_oljlp0u6eQ1vkgjmeo1_400.png" alt=""
+                  />
                 </div>
 
                 <div style={col4Mobile}>
-                  <img style={{
-                    height: "22.33vh",
-                    width: "100%"
-                  }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""/>
+                  <img
+                    style={{
+                      height: '22.33vh',
+                      width: '100%',
+                    }} src="https://68.media.tumblr.com/5bded6548c3a2fe8eec491739d0e4dbd/tumblr_okilf9jzeF1vkgjmeo1_500.png" alt=""
+                  />
                 </div>
               </div>
             </Responsive>

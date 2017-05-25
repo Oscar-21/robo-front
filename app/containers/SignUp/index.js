@@ -15,33 +15,34 @@ export default class SignIn extends React.PureComponent {
     this.state = {
       email: '',
       username: '',
-      password: ''
+      password: '',
     };
   }
 
   handleEmail = (event) => {
-    this.setState({email: event.target.value});
+    this.setState({ email: event.target.value });
   }
 
   handleUsername = (event) => {
-    this.setState({username: event.target.value});
+    this.setState({ username: event.target.value });
   }
 
   handlePassword = (event) => {
-    this.setState({password: event.target.value});
+    this.setState({ password: event.target.value });
   }
 
   storeUser = () => {
-    var data = new FormData();
+    const data = new FormData();
     data.append('username', this.state.username);
     data.append('password', this.state.password);
     data.append('email', this.state.email);
     fetch('http://localhost:8000/api/signUp', {
       method: 'post',
-      body: data
-    }).then(function(response) {
+      body: data,
+
+    }).then((response) => {
       return response.json();
-    }).then(function(json) {
+    }).then((json) => {
       if (json.success) {
         alert(json.success);
       } else if (json.error) {
@@ -55,7 +56,7 @@ export default class SignIn extends React.PureComponent {
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
-      background: '#607D8B'
+      background: '#607D8B',
     };
     const backgroundContentBox = {
       display: 'flex',
@@ -65,7 +66,7 @@ export default class SignIn extends React.PureComponent {
       /* marginLeft: '10%', */
       marginTop: '3%',
       background: '#ECEFF1',
-      width: '90%'
+      width: '90%',
     };
     const titleBox = {
       marginTop: '4%',
@@ -75,7 +76,7 @@ export default class SignIn extends React.PureComponent {
       paddingTop: '1.5%',
       paddingBottom: '1.5%',
       borderTop: '2px solid black',
-      borderBottom: '2px solid black'
+      borderBottom: '2px solid black',
     };
     const titleStyle = {
       fontFamily: 'Source Sans Pro',
@@ -85,7 +86,7 @@ export default class SignIn extends React.PureComponent {
       fontStyle: 'light',
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: '6px'
+      letterSpacing: '6px',
     };
     const titleStyleMobile = {
       fontFamily: 'Source Sans Pro',
@@ -95,47 +96,49 @@ export default class SignIn extends React.PureComponent {
       fontStyle: 'light',
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: '4px'
+      letterSpacing: '4px',
     };
     const inputStyleEmail = {
       margin: '0 auto',
       marginBottom: '.4%',
       width: '20%',
-      border: '1px solid black'
+      border: '1px solid black',
     };
     const inputStylePassword = {
       margin: '0 auto',
       width: '20%',
-      border: '1px solid black'
+      border: '1px solid black',
     };
 
     const inputStyleUsername = {
       margin: '0 auto',
       width: '20%',
-      border: '1px solid black'
+      border: '1px solid black',
     };
     const buttonStyle = {
       margin: '0 auto',
       marginTop: '2%',
-      width: '13%'
+      width: '13%',
     };
     const inputStyleMobile = {
       marginLeft: '25%',
       width: '45%',
-      border: '1px solid black'
+      border: '1px solid black',
     };
     const buttonStyleMobile = {
-      marginLeft: '38%'
+      marginLeft: '38%',
     };
     return (
       <div>
-        <Helmet title="SignIn" meta={[{
+        <Helmet
+          title="SignIn" meta={[{
             name: 'description',
-            content: 'Description of SignIn'
-          }
-        ]}/>
+            content: 'Description of SignIn',
+          },
+          ]}
+        />
         <header>
-          <LayoutStyle/>
+          <LayoutStyle />
         </header>
 
         <Responsive minDeviceWidth={1024}>
@@ -143,13 +146,13 @@ export default class SignIn extends React.PureComponent {
             <div style={backgroundContentBox}>
               <div style={titleBox}>
                 <div style={titleStyle}>
-                  Login
+                  sign up
                 </div>
               </div>
-              <input style={inputStyleEmail} onChange={this.handleEmail} type="text" placeholder="email"/>
-              <input style={inputStyleUsername} onChange={this.handleUsername} type="text" placeholder="username"/>
-              <input type="text" style={inputStylePassword} placeholder="password" onChange={this.handlePassword}/>
-              <RaisedButton style={buttonStyle} label="Submit" primary={true} onTouchTap={this.storeUser}/>
+              <input style={inputStyleEmail} onChange={this.handleEmail} type="text" placeholder="email" />
+              <input style={inputStyleUsername} onChange={this.handleUsername} type="text" placeholder="username" />
+              <input type="text" style={inputStylePassword} placeholder="password" onChange={this.handlePassword} />
+              <RaisedButton style={buttonStyle} label="Submit" primary onTouchTap={this.storeUser} />
             </div>
           </main>
         </Responsive>
@@ -159,14 +162,14 @@ export default class SignIn extends React.PureComponent {
             <div style={backgroundContentBox}>
               <div style={titleBox}>
                 <div style={titleStyleMobile}>
-                  Login
+                  Sign up
                 </div>
               </div>
-              <input style={inputStyleMobile} type="text" placeholder="email" onChange={this.handleEmail}/>
-              <input style={inputStyleMobile} type="text" placeholder="username" onChange={this.handleUsername}/>
-              <input type="text" style={inputStyleMobile} placeholder="password" onChange={this.handlePassword}/>
+              <input style={inputStyleMobile} type="text" placeholder="email" onChange={this.handleEmail} />
+              <input style={inputStyleMobile} type="text" placeholder="username" onChange={this.handleUsername} />
+              <input type="text" style={inputStyleMobile} placeholder="password" onChange={this.handlePassword} />
               <div>
-                <RaisedButton style={buttonStyleMobile} label="Submit" primary={true} onTouchTap={this.storeUser}/>
+                <RaisedButton style={buttonStyleMobile} label="Submit" primary onTouchTap={this.storeUser} />
               </div>
             </div>
           </main>
