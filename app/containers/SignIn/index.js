@@ -27,7 +27,7 @@ export default class SignIn extends React.PureComponent {
   }
 
   signIn = () => {
-    var data = new FormData();
+    const data = new FormData();
     data.append('email', this.state.email);
     data.append('password', this.state.password);
     fetch('http://localhost:8000/api/signIn', {
@@ -110,25 +110,27 @@ export default class SignIn extends React.PureComponent {
     const buttonStyle = {
       margin: '0 auto',
       marginTop: '2%',
-      width: '13%'
+      width: '13%',
     };
     const inputStyleMobile = {
       marginLeft: '25%',
       width: '45%',
-      border: '1px solid black'
+      border: '1px solid black',
     };
     const buttonStyleMobile = {
-      marginLeft: '38%'
+      marginLeft: '38%',
     };
     return (
       <div>
-        <Helmet title="SignIn" meta={[{
+        <Helmet
+          title="SignIn" meta={[{
             name: 'description',
-            content: 'Description of SignIn'
-          }
-        ]}/>
+            content: 'Description of SignIn',
+          },
+          ]}
+        />
         <header>
-          <LayoutStyle/>
+          <LayoutStyle />
         </header>
 
         <Responsive minDeviceWidth={1024}>
@@ -139,9 +141,9 @@ export default class SignIn extends React.PureComponent {
                   Login
                 </div>
               </div>
-              <input style={inputStyleEmail} onChange={this.handleEmail} type="text" placeholder="email"/>
-              <input type="text" style={inputStylePassword} placeholder="password" onChange={this.handlePassword}/>
-              <RaisedButton style={buttonStyle} label="Submit" primary={true} onTouchTap={this.signIn}/>
+              <input style={inputStyleEmail} onChange={this.handleEmail} type="text" placeholder="email" />
+              <input type="text" style={inputStylePassword} placeholder="password" onChange={this.handlePassword} />
+              <RaisedButton style={buttonStyle} label="Submit" primary onTouchTap={this.signIn} />
             </div>
           </main>
         </Responsive>
@@ -154,10 +156,10 @@ export default class SignIn extends React.PureComponent {
                   Login
                 </div>
               </div>
-              <input style={inputStyleMobile} type="text" placeholder="email" onChange={this.handleEmail}/>
-              <input type="text" style={inputStyleMobile} placeholder="password" onChange={this.handlePassword}/>
+              <input style={inputStyleMobile} type="text" placeholder="email" onChange={this.handleEmail} />
+              <input type="text" style={inputStyleMobile} placeholder="password" onChange={this.handlePassword} />
               <div>
-                <RaisedButton style={buttonStyleMobile} label="Submit" primary={true} onTouchTap={this.signIn}/>
+                <RaisedButton style={buttonStyleMobile} label="Submit" primary onTouchTap={this.signIn} />
               </div>
             </div>
           </main>

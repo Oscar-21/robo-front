@@ -153,7 +153,7 @@ export default class StoreFront extends React.PureComponent {
    /* textAlign: 'center',*/
       textTransform: 'uppercase',
       letterSpacing: '2.5px',
-      fontSize: '1.1em',
+      fontSize: '.95em',
       color: 'white',
       /*borderTop: '.5px solid black',
       borderLeft: '.5px solid black',
@@ -166,8 +166,9 @@ export default class StoreFront extends React.PureComponent {
     const navStyleText = {
       margin: '0 auto',
       opacity: '0.5%',
-      paddingTop: '20%',
+      textAlign: 'center',
       textShadow: '1px 0px .5px #000, 1px -.5px -.5px #000, 1px .5px .5px #000',
+      paddingTop: '20%',
 
     };
     return (

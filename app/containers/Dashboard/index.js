@@ -9,9 +9,9 @@ import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper'; 
+import Paper from 'material-ui/Paper';
 import MenuItem from 'material-ui/MenuItem';
-import Menu from 'material-ui/Menu'; 
+import Menu from 'material-ui/Menu';
 import Responsive from 'react-responsive';
 
 export default class Dashboard extends React.PureComponent {
@@ -55,18 +55,18 @@ export default class Dashboard extends React.PureComponent {
       return (
         <div>
           <Responsive minDeviceWidth={1024}>
-         <Paper style={paperStyle}>
-              <Menu> 
+            <Paper style={paperStyle}>
+              <Menu>
                 <MenuItem primaryText="Home" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="About us" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="Browse" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="Contribute" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="Our Friends" containerElement={<Link to="/"></Link>} />
-           </Menu>
+              </Menu>
             </Paper>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
-        <Paper style={styleMobile}>
+            <Paper style={styleMobile}>
               <Menu>
                 <MenuItem primaryText="Home" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="About us" containerElement={<Link to="/"></Link>} />
@@ -74,7 +74,7 @@ export default class Dashboard extends React.PureComponent {
                 <MenuItem primaryText="Contribute" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="Our Friends" containerElement={<Link to="/"></Link>} />
                 <MenuItem primaryText="Log in" containerElement={<Link to="/"></Link>} />
-         </Menu>
+              </Menu>
             </Paper>
           </Responsive>
         </div>
@@ -99,8 +99,8 @@ export default class Dashboard extends React.PureComponent {
   }
   handleImage = (event) => {
     event.preventDefault();
-    let reader = new FileReader();
-    let file = event.target.files[0];
+    const reader = new FileReader();
+    const file = event.target.files[0];
     reader.onloadend = () => {
       this.setState({ image: file, preview: reader.result });
     };
@@ -108,8 +108,8 @@ export default class Dashboard extends React.PureComponent {
   }
   handleImage2 = (event) => {
     event.preventDefault();
-    let reader = new FileReader();
-    let file = event.target.files[0];
+    const reader = new FileReader();
+    const file = event.target.files[0];
     reader.onloadend = () => {
       this.setState({ image2: file, preview2: reader.result });
     };
@@ -117,26 +117,26 @@ export default class Dashboard extends React.PureComponent {
   }
 
   storeArticle = () => {
-      var data = new FormData();
-      data.append('title', this.state.title);
-      data.append('subheader', this.state.subheader);
-      data.append('body', this.state.body);
-      data.append('image', this.state.image);
-      data.append('image2', this.state.image2);
-      fetch('http://localhost:8000/api/storeArticle?token='+this.state.token, {
-        method: 'post',
-        body: data,
-        headers: { 'Authorization':'Bearer '+this.state.token }
-      }).then(function (response) {
-        return response.json();
-      }).then(function (json) {
-        if (json.success) {
-          alert(json.success);
-        } else if (json.error) {
-          alert(json.error);
-        }
-      });
-    }
+    const data = new FormData();
+    data.append('title', this.state.title);
+    data.append('subheader', this.state.subheader);
+    data.append('body', this.state.body);
+    data.append('image', this.state.image);
+    data.append('image2', this.state.image2);
+    fetch(`http://localhost:8000/api/storeArticle?token=, ${this.state.token}`, {
+      method: 'post',
+      body: data,
+      headers: { 'Authorization':'Bearer: ' + this.state.token }
+    }).then((response) => {
+      return response.json();
+    }).then((json) => {
+      if (json.success) {
+        alert(json.success);
+      } else if (json.error) {
+        alert(json.error);
+      }
+    });
+  }
 
   render() {
     const navStyleMobile = {
