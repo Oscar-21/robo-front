@@ -17,19 +17,15 @@ export default class SignIn extends React.PureComponent {
       password: '',
     };
   }
-
   handleEmail = (event) => {
     this.setState({ email: event.target.value });
   }
-
   handleUsername = (event) => {
     this.setState({ username: event.target.value });
   }
-
   handlePassword = (event) => {
     this.setState({ password: event.target.value });
   }
-
   storeUser = () => {
     const data = new FormData();
     data.append('username', this.state.username);
@@ -49,7 +45,6 @@ export default class SignIn extends React.PureComponent {
       }
     });
   }
-
   render() {
     const backgroundStyle = {
       display: 'flex',
@@ -107,7 +102,6 @@ export default class SignIn extends React.PureComponent {
       width: '20%',
       border: '1px solid black',
     };
-
     const inputStyleUsername = {
       margin: '0 auto',
       width: '20%',
@@ -151,7 +145,6 @@ export default class SignIn extends React.PureComponent {
             </div>
           </main>
         </Responsive>
-
         <Responsive maxDeviceWidth={1023}>
           <main style={backgroundStyle}>
             <div style={backgroundContentBox}>
