@@ -9,6 +9,16 @@ const loadModule = (comMod) => (componentModule) => {
 export default function createRoutes() {
 
   return [
+
+    {
+     path: '/Imarray',
+     name: 'imarray',
+     getComponent(nextState, comMod) {
+       import('containers/Imarray')
+         .then(loadModule(comMod))
+         .catch(errorLoading);
+     },
+   },
     {
      path: '/SignUp',
      name: 'signup',
