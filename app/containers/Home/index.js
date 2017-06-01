@@ -8,6 +8,7 @@ import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Responsive from 'react-responsive';
 import NavBar from 'components/NavBar';
+import Hello from 'components/Hello';
 export default class Home extends React.PureComponent {
   render() {
     const backgroundStyle = {
@@ -83,6 +84,7 @@ export default class Home extends React.PureComponent {
               <div style={borderStyle}></div>
               <Responsive minDeviceWidth={1024}>
                 <NavBar />
+                <Hello />
                 <div style={row}>
                   <div style={col12}>
                   </div>
